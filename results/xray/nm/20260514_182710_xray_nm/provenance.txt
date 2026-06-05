@@ -1,0 +1,17 @@
+XRAY Pathology Study — Nethermind CLR @ spaceneth
+==================================================
+Run ID:  20260514_182710_xray_nm
+Date:    Thu May 14 18:27:10 KST 2026
+Host:    compute10
+Binary:  /home/yeochan.yoon/nethermind/src/Nethermind/artifacts/bin/Nethermind.Runner/release/nethermind.dll
+
+GC:      CLR default (no heap hard limit override)
+Load:    50 TPS, 20 workers, 200 slots/tx, 30s warmup + 120s stress
+Client:  Nethermind spaceneth NethDev (chainId 99, disk-based RocksDB)
+Reps:    3
+
+Expected pathologies:
+  1. NethDev block-packing ceiling: ~5 tx/s regardless of gas config.
+     50 tx/s input → 45 tx/s mempool accumulation → latency cliff (4–10 s).
+  2. RocksDB dirty-cache flush stall: ~662 ms per 195 MB dirty threshold.
+     Appears as periodic I/O-induced STW in NM console log.
