@@ -1,0 +1,16 @@
+XRAY Pathology Study — Hyperledger Besu @ 4 GB Heap
+=====================================================
+Run ID:  20260514_181056_xray_besu
+Date:    Thu May 14 18:10:56 KST 2026
+Host:    compute10
+Binary:  /home/yeochan.yoon/besu-24.1.1/bin/besu
+
+Heap:    -Xms4g -Xmx4g
+GC:      G1GC, G1HeapRegionSize=32m, MaxGCPauseMillis=200
+Load:    50 TPS, 20 workers, 200 slots/tx, 30s warmup + 120s stress
+Client:  Besu dev-mode (chainId 1337)
+Reps:    3
+
+Expected pathology:
+  G1GC Young-Gen sawtooth at ~158 MB/s fill rate.
+  Old Gen remains 0 MB — no Full GC. Demonstrates JVM Scale-Up strategy.
