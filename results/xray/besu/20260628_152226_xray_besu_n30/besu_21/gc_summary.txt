@@ -1,0 +1,6 @@
+gen0_gc_count=15
+gen1_gc_count=0
+gen2_gc_count=00
+total_gc_count=15
+total_pause_ms=94.47
+avg_pause_ms=6.30

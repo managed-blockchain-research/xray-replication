@@ -1,0 +1,3 @@
+stress_tps=14.80
+stress_succ=1776
+stress_fail=2
