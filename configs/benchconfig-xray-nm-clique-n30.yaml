@@ -1,0 +1,36 @@
+test:
+  name: xray-nm-stress
+  description: >
+    XRAY pathology study — Nethermind CLR under state-bloat stress.
+    15 TPS target, 20 workers, 200 slots/tx. 30s warmup + 120s measure.
+    Same target as Besu; NethDev ceiling (~5 tx/s) causes mempool backlog
+    → latency cliff (observed 4–10 s in Phase 2).
+    CLR pathology: RocksDB dirty-cache flush stall ~662 ms per 195 MB.
+  workers:
+    type: local
+    number: 20
+  rounds:
+    - label: warmup
+      txDuration: 30
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 15
+      workload:
+        module: benchmarks/stateBloat.js
+        arguments:
+          slotsPerTx: 200
+          numContracts: 1
+          contractPrefix: SB
+    - label: stress
+      txDuration: 120
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 15
+      workload:
+        module: benchmarks/stateBloat.js
+        arguments:
+          slotsPerTx: 200
+          numContracts: 1
+          contractPrefix: SB

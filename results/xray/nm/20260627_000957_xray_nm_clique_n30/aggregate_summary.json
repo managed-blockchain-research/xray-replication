@@ -1,0 +1,16 @@
+{
+  "n_reps": 30,
+  "tps_mean": 14.709333333333333,
+  "tps_std": 0.18099215706637736,
+  "succ_mean": 1765.7,
+  "fail_mean": 0,
+  "gen0_mean": 0.9,
+  "gen1_mean": 0.2,
+  "gen2_mean": 1,
+  "gen2_reps_pct": 100.0,
+  "total_gc_mean": 2.1,
+  "total_pause_mean_ms": 167.23333333333335,
+  "total_pause_std_ms": 121.85059911936062,
+  "avg_pause_mean_ms": 60.255,
+  "avg_pause_std_ms": 26.0938451918561
+}
