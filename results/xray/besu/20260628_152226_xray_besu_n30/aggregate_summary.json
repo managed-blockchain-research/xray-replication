@@ -1,0 +1,17 @@
+{
+  "n_reps": 30,
+  "tps_mean": 14.721333333333334,
+  "tps_std": 0.2266051302540859,
+  "succ_mean": 1767.0666666666666,
+  "succ_std": 27.32427660440479,
+  "fail_mean": 1.1333333333333333,
+  "gen0_mean": 15.2,
+  "gen0_std": 0.4068381021724862,
+  "fullgc_mean": 0,
+  "fullgc_std": 0.0,
+  "total_gc_mean": 15.2,
+  "total_pause_mean_ms": 111.43599999999999,
+  "total_pause_std_ms": 14.946736144700965,
+  "avg_pause_mean_ms": 7.336,
+  "avg_pause_std_ms": 1.0095017548788354
+}

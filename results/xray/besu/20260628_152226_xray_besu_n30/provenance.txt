@@ -1,0 +1,12 @@
+XRAY-v2: Hyperledger Besu n=30
+=============================================
+Run ID:     20260628_152226_xray_besu_n30
+Date:       Sun Jun 28 15:22:26 KST 2026
+Host:       compute10
+Consensus:  dev (instant-seal Clique, chainId 1337)
+GC mode:    G1GC, -Xms4g -Xmx4g, G1HeapRegionSize=32m
+Workload:   StateBloater(200 slots), 15 tx/s, 20 workers
+            30s warmup + 120s stress
+
+Besu:       /home/yeochan.yoon/besu-24.1.1/bin/besu
+Caliper:    └── @hyperledger/caliper-cli@0.4.2
