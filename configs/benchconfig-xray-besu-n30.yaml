@@ -1,0 +1,35 @@
+test:
+  name: xray-besu-stress
+  description: >
+    XRAY pathology study — Besu JVM/G1GC under state-bloat stress.
+    15 TPS, 20 workers, 200 slots/tx. 30s warmup + 120s measure.
+    TPS matched to Besu Phase-2 natural throughput (~15 tx/s).
+    Shows G1GC Young-Gen sawtooth with Old-Gen = 0.
+  workers:
+    type: local
+    number: 20
+  rounds:
+    - label: warmup
+      txDuration: 30
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 15
+      workload:
+        module: benchmarks/stateBloat.js
+        arguments:
+          slotsPerTx: 200
+          numContracts: 1
+          contractPrefix: SB
+    - label: stress
+      txDuration: 120
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 15
+      workload:
+        module: benchmarks/stateBloat.js
+        arguments:
+          slotsPerTx: 200
+          numContracts: 1
+          contractPrefix: SB

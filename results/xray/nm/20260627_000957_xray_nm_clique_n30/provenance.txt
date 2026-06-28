@@ -1,0 +1,12 @@
+XRAY-v2: Nethermind Clique n=30
+=============================================
+Run ID:     20260627_000957_xray_nm_clique_n30
+Date:       Sat Jun 27 00:09:59 KST 2026
+Host:       compute10
+Consensus:  Clique PoA (period=1s, chainId=1337)
+GC mode:    Server GC (DOTNET_gcServer=1)
+Workload:   StateBloater(200 slots), 15 tx/s, 20 workers
+            30s warmup + 120s stress
+
+Nethermind: 68b3cf7d3f Optimization/prewarmer per sender (#10330)
+Caliper:    └── @hyperledger/caliper-cli@0.4.2

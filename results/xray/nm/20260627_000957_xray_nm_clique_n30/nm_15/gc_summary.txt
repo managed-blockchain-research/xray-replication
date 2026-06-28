@@ -1,0 +1,8 @@
+gen0_gc_count=1
+gen1_gc_count=0
+gen2_gc_count=1
+total_gc_count=2
+trace_duration_s=4.1
+total_pause_count=3
+total_pause_ms=109.7
+avg_pause_ms=36.56
