@@ -17,5 +17,11 @@ Replication package for XRAY cross-runtime diagnostic evaluation.
   absolute paths from the original experiment host; update the path
   constants near the top of each file to point at your own results
   directory.
+  `analysis/ofat_summary.json` and `analysis/queueing_model_results.json`
+  are the pre-computed outputs of `gen_ofat_summary.py` and
+  `gen_queueing_model.py` respectively, run against the full raw
+  per-replication logs (which are too large to host here) — they
+  reproduce Tables 3 and 4 of the paper exactly and let you check the
+  paper's numbers without re-running the sweep yourself.
 - `results/` — GC event and latency summary CSVs
 - `src/` — Smart contract source
